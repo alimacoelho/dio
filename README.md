@@ -11,7 +11,7 @@ O desafio faz parte do curso na plataforma da Digital Innovation One:
 
 __*Criando um ecossitema Hadoop totalmente gerenciado com Google Cloud Platform*__
 
-O desafio consiste em efetuar um processamento de dados utilizando o produto Dataproc do GCP. Esse processamento irá efetuar a contahem das palavras de ̶l̶i̶v̶r̶o̶  __*FILMES*__ e informar quantas vezes cada  ̶p̶a̶l̶a̶v̶r̶a̶  __*PERSONAGEM*__ aparece no mesmo.
+O desafio consiste em efetuar um processamento de dados utilizando o produto Dataproc do GCP. Esse processamento irá efetuar a contahem das palavras de  __*FILMES*__ e informar quantas vezes cada __*PERSONAGEM*__ aparece nos mesmos.
 
 Nesse caso, utilizei as transcrições de audio dos filmes da Disney/Pixar Toy Story e Toy Story 2, disponíveis em https://transcripts.fandom.com/wiki/Toy_Story e https://transcripts.fandom.com/wiki/Toy_Story_2
 ---
@@ -24,12 +24,12 @@ Nesse caso, utilizei as transcrições de audio dos filmes da Disney/Pixar Toy S
     - https://cloud.google.com/storage/docs/uploading-objects
 
 1. Utilizar o código em um cluster Dataproc, executando um Job do tipo PySpark chamando ```__*OK - gs://desafiodata/...contador.py*__```
-1. O Job irá gerar uma pasta no bucket chamada ```resultado```. Dentro dessa pasta o arquivo ```part-00000``` irá conter a lista de palavras e quantas vezes ela é repetida em todos l̶i̶v̶r̶o̶  __* os FILMES*__.
+1. O Job irá gerar uma pasta no bucket chamada ```resultado```. Dentro dessa pasta o arquivo ```part-00000``` irá conter a lista de palavras e quantas vezes ela é repetida em todos __* os FILMES*__.
 
 ### Entrega do Resultado
 
 1. Criar um repositório no GitHub. __*OK*__ 
-2. Criar um arquivo chamado ```resultado.txt```. Dentro desse arquivo, colocar as  ̶1̶0̶ ̶p̶a̶l̶a̶v̶r̶a̶s̶ __*QUAIS PERSONAGENS*__  que mais aparecem nos l̶i̶v̶r̶o̶  __*FILMES*__, de acordo com o resultado do Job. __*OK*__
+2. Criar um arquivo chamado ```resultado.txt```. Dentro desse arquivo, colocar as  ̶1̶0̶ ̶p̶a̶l̶a̶v̶r̶a̶s̶ __*QUAIS PERSONAGENS*__  que mais aparecem nos __*FILMES*__, de acordo com o resultado do Job. __*OK*__
 3. Inserir os arquivo ```resultado.txt``` e ```part-00000``` no repositório e informar na plataforma da Digital Innovation One. __*OK*__
 
 ---
