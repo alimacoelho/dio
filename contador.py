@@ -24,4 +24,4 @@ if __name__ == "__main__":
         o = 0
 
         total_sorted = {k: v for k, v in sorted(total.items(), key=lambda x: x[1], reverse=True)}
-        total_sorted.saveAsTextFile("gs://desafiodata/resultado")
+        total_sorted.saveAsTextFile("gs://desafiodata/nomes")
