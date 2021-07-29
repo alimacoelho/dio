@@ -4,16 +4,11 @@ from pyspark import SparkContext, SparkConf
 if __name__ == "__main__":
     sc = SparkContext("local","PySpark Exemplo - Desafio Dataproc")
     
-    lines = []   
+    
     txtfile = sc.textFile("gs://desafiodata/toystory1.txt")
     
-    for line in txtfile:
-        lines.append(line)
-    
-    
-    
-    lines.toLocalIterator.mkString
-    lines = re.sub(r'\(.+\)|<.+?>|\{.+\||\[.+?\]| \*.+?\* |\] | ! |\}', '', lines)
+  
+    lines = re.sub(r'\(.+\)|<.+?>|\{.+\||\[.+?\]| \*.+?\* |\] | ! |\}', '', txtfile)
     
     wordlist = lines.split()
     wordcount = Counter(wordlist)
