@@ -5,7 +5,7 @@ if __name__ == "__main__":
     sc = SparkContext("local","PySpark Exemplo - Desafio Dataproc")
     
 lines = []   
-with open(r'toystory1.txt','r') as txtfile:
+txtfile = sc.textFile("gs://desafiodata/toystory1.txt")
     
     for line in txtfile:
         lines.append(line)
