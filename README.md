@@ -3,7 +3,7 @@
 # Digital Innovation One
 
 Código criado para utilização junto a plataforma da Digital Innovation One
-
+Segundo as orientações da plataforma, tomei a liberdade de alterar o desafio, conforme explicado abaixo.
 
 ## Desafio GCP Dataproc
 
