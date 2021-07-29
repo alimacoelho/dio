@@ -1,10 +1,10 @@
 import sys, re
+import pySpark
 from collections import Counter
-
+from pyspark import SparkContext, SparkConf
 if __name__ == "__main__":
-  
-    s = open ('toystory1.txt','r')
-    words = s.read()
+    sc = SparkContext("local","PySpark Exemplo - Desafio Dataproc")
+    words = sc.textFile("gs://desafiodata/toystory1.txt").flatMap(lambda line: line.split(" "))
     words = re.sub(r'\(.+\)|<.+?>|\{.+\||\[.+?\]| \*.+?\* |\] | ! |\}', '', words)
     
     wordlist = words.split()
@@ -15,6 +15,4 @@ if __name__ == "__main__":
     result = re.sub( '[)]', '', result)
 
 
-    f = open("resultados.txt", "w")
-    f.write(result)
-    f.close()
+    result.saveAsTextFile("gs://desafiodata/resultadotoy.txt")
