@@ -1,17 +1,20 @@
 import sys, re
-from pyspark import SparkContext, SparkConf
+from collections import Counter
+
 if __name__ == "__main__":
-    sc = SparkContext("local","PySpark Exemplo - Desafio Dataproc")
+  
+    s = open ('toystory1.txt','r')
+    words = s.read()
+    words = re.sub(r'\(.+\)|<.+?>|\{.+\||\[.+?\]| \*.+?\* |\] | ! |\}', '', words)
+    
+    wordlist = words.split()
+    wordcount = Counter(wordlist)
+    result = str(wordcount.most_common(10))
+    result = re.sub( '\[|]|\(| [),]', '', result)
+    result = re.sub( '\),','\n',result)
+    result = re.sub( '[)]', '', result)
 
-words = sc.textFile("gs://desafio_dataproc123/toystory1.txt").flatMap(lambda line: line.split(" "))
-words = re.sub(r'\(.+\)', '', words)
-words = re.sub(r'<.+?>', '', words)
 
-words = re.sub(r'\{.+\|', '', words)
-words = re.sub(r'}', '', words)
-words = re.sub(r'\[.+?\]', '', words)
-words = re.sub(r'\*.+?\*', '', words)
-words = re.sub(r'\]', '', words)
-   
-    wordCounts = words.map(lambda word: (word, 1)).reduceByKey(lambda a,b:a +b).sortBy(lambda a:a[1], ascending=False)
-    wordCounts.saveAwordsextFile("gs://desafio_dataproc123/resultado")
+    f = open("resultados.txt", "w")
+    f.write(result)
+    f.close()
