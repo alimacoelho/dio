@@ -3,6 +3,7 @@ from collections import Counter
 from pyspark import SparkContext, SparkConf
 if __name__ == "__main__":
     sc = SparkContext("local","PySpark Exemplo - Desafio Dataproc")
+    val words = sc.wholeTextFiles("gs://desafiodata/toystory1.txt")
     words.toLocalIterator.mkString
     words = re.sub(r'\(.+\)|<.+?>|\{.+\||\[.+?\]| \*.+?\* |\] | ! |\}', '', words)
     
