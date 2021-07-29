@@ -3,7 +3,7 @@ from collections import Counter
 from pyspark import SparkContext, SparkConf
 if __name__ == "__main__":
     sc = SparkContext("local","PySpark Exemplo - Desafio Dataproc")
-    words = sc.textFile("gs://desafiodata/toystory1.txt").flatMap(lambda line: line.split(" "))
+    words = sc.wholeTextFiles("gs://desafiodata/toystory1.txt")
     words = re.sub(r'\(.+\)|<.+?>|\{.+\||\[.+?\]| \*.+?\* |\] | ! |\}', '', words)
     
     wordlist = words.split()
