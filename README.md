@@ -29,7 +29,7 @@ Nesse caso, utilizei as transcrições de audio dos filmes da Disney/Pixar Toy S
 ### Entrega do Resultado
 
 1. Criar um repositório no GitHub. __*OK*__ 
-2. Criar um arquivo chamado ```resultado.txt```. Dentro desse arquivo, colocar as  ̶1̶0̶ ̶p̶a̶l̶a̶v̶r̶a̶s̶ __*QUAIS PERSONAGENS*__  que mais aparecem nos __*FILMES*__, de acordo com o resultado do Job. __*OK*__
+2. Criar um arquivo chamado ```resultado.txt```. Dentro desse arquivo, colocar as  ̶1̶0̶ ̶p̶a̶l̶a̶v̶r̶a̶s̶ __*QUAIS PERSONAGENS*__  que mais aparecem nos __*FILMES*__, de acordo com o resultado do Job. Para isso, utilizei o script characters.py para alterar a saída do job e gerar arquivo combinando os nomes que apareciam mais de uma vez, por motivo de pontuação, sotaques na transcrição etc.__*OK*__
 3. Inserir os arquivo ```resultado.txt``` e ```part-00000``` no repositório e informar na plataforma da Digital Innovation One. __*OK*__
 
 ---
