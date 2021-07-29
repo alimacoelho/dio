@@ -5,7 +5,7 @@ if __name__ == "__main__":
     words = sc.textFile("gs://desafiodata/toystory.txt").flatMap(lambda line: line.split(" "))
     wordCounts = words.map(lambda word: (word, 1)).reduceByKey(lambda a,b:a +b).sortBy(lambda a:a[1], ascending=False)
     wordCounts.saveAsTextFile("gs://desafiodata/resultado")
-    r = open ("gs://desafiodata/resultado",'r')
+    r = wordCounts
     resultado = r.readlines()
     characters = ['Buzz', 'Woody', 'Jessie', 'Bullseye', 'Slinky', 'Rocky', 'Wheezy', 'Pete', 'Bo', 'Potato' , 'Rex', 'Hamm', 'Sarge', 'RC', 'Andy', 'Sid', 'Hannah', 'Zurg']
 
