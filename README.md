@@ -20,11 +20,11 @@ Nesse caso, utilizei as transcrições de audio dos filmes da Disney/Pixar Toy S
 ### Etapas do Desafio
 
 1. Criar um bucket no Cloud Storage __*OK*__
-2. Atualizar o arquivo ```contador.py``` com o nome do Bucket criado nas linhas que contém ```{SEU_BUCKET}```. __*OK - gs://desafiodata/...*__
+2. Atualizar o arquivo ```contador.py``` com o nome do Bucket criado nas linhas que contém ```{SEU_BUCKET}```. __*OK*__ - gs://desafiodata/...
 3. Fazer o upload dos arquivos ```contador.py``` e ```livro.txt``` para o bucket criado (instruções abaixo)
     - https://cloud.google.com/storage/docs/uploading-objects
 
-4. Utilizar o código em um cluster Dataproc, executando um Job do tipo PySpark chamando ```__*OK - gs://desafiodata/...contador.py*__```
+4. Utilizar o código em um cluster Dataproc, executando um Job do tipo PySpark chamando__*OK*__ -  ```gs://desafiodata/...contador.py```
 5. O Job irá gerar uma pasta no bucket chamada ```resultado```. Dentro dessa pasta o arquivo ```part-00000``` irá conter a lista de palavras e quantas vezes ela é repetida em todos __* os FILMES*__.
 
 ### Entrega do Resultado
