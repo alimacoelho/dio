@@ -1,5 +1,4 @@
 import sys, re
-import txt
 from collections import Counter
 from pyspark import SparkContext, SparkConf
 if __name__ == "__main__":
@@ -7,8 +6,8 @@ if __name__ == "__main__":
     
 lines = []   
 with open(r'gs://desafiodata/toystory1.txt','r') as txtfile:
-    txtreader = txt.reader(txtfile)
-    for line in txtreader:
+    
+    for line in txtfile:
         lines.append(line)
     
     
